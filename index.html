@@ -3,8 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<title>test page</title>
+<style>
+	*{margin: 0;padding: 0;vertical-align: middle;}
+	html{font-size: 100px;line-height: 1.1;}
+	@media only screen and (min-width: 576px) and (max-width: 770px) { html { font-size: 76.8px; } }
+	@media only screen and (min-width: 414px) and (max-width: 575px) { html { font-size: 55.2px; } }
+	@media only screen and (min-width: 412px) and (max-width: 413px) { html { font-size: 54.93px; } }
+	@media only screen and (min-width: 374px) and (max-width: 411px) { html { font-size: 50px; } }
+	@media only screen and (min-width: 359px) and (max-width: 373px) { html { font-size: 48px; } }
+	@media only screen and (min-width: 0) and (max-width: 358px) { html { font-size: 42.67px; } }
+	body{background: #333;color: #DDD;text-align: center;margin: 8px;}
+	p{font-size: 0.5rem;}
+</style>
 </head>
+
 <body>
 	<p>test Page</p>
+	<p>测试页面</p>
+	<p id="page"></p>
+	<script>
+		var p = document.getElementById('page');
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		p.innerText = w + 'X' + h;
+	</script>
 </body>
+
 </html>
